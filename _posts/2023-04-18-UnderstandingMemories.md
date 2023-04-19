@@ -11,5 +11,5 @@ Exploring issues with Large Language Models:
 Also a little work with Photoshop for better image editing:
 
 [<< Photoshop Collage1 >>](https://drive.google.com/file/d/1xsoAacuy2FplPxpPi02QNDqLTDHKF6FB/view?usp=sharing)   
-[<< Photoshop Collage2 >>](https://drive.google.com/file/d/1p82xN3HvOXEGr-RmnaMkk6i64bf7c8QG/view?usp=sharing)   
+[<< Photoshop Collage2 >>](https://drive.google.com/file/d/1QJU7ND0zBaiJSgU8cULdccMJGmjG_LMO/view?usp=sharing)   
 [<< Photoshop Collage Report >>](https://drive.google.com/file/d/1JrBwxmmbeS-_1LlUvDWgAygnY5T0TTlQ/view?usp=sharing)    
