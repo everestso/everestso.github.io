@@ -6,7 +6,8 @@ date: 2023-04-18
 
 Exploring issues with Large Language Models:
 
-[<< Memories >>](https://drive.google.com/file/d/1PIjbC6EyzIk3855rjcZEOqzham8jUpvk/view?usp=sharing)
+[<< Memories >>](https://drive.google.com/file/d/1PIjbC6EyzIk3855rjcZEOqzham8jUpvk/view?usp=sharing)   
+[<< Malleable Memories >>](https://drive.google.com/file/d/1pBdxUhweSA6a3tvsWYu_CYvB5JQ1gyps/view?usp=sharing)
 
 Also a little work with Photoshop for better image editing:
 
