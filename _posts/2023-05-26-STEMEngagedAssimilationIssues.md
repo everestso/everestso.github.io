@@ -10,4 +10,6 @@ The issue is that communities underserved in STEM are frequently undserved with 
 
 Any STEM engagement process that ignores the central valley social landscape is trully couterproductive: worse than doing nothing becuase it creates issues and ignores them (like even repressed misogynistic attitudes in a male dominated community).
 
+Still, Central Valley is a better location than many to make mistakes becuase our underserved communities have self-segregrated for historical reasons, and there is room for this self-segregation in the valley.
+
 [<< ?? >>](???) 
