@@ -8,4 +8,6 @@ Exploring Sabbatical Report ideas for issus with STEM engagment into underserved
 
 The issue is that communities underserved in STEM are frequently undserved with significant surrounding social issues. Engagement tools ignorning these issues can compound these social issues (like racism).
 
+Any STEM engagement process that ignores the central valley social landscape is trully couterproductive: worse than doing nothing becuase it creates issues and ignores them.
+
 [<< ?? >>](???) 
