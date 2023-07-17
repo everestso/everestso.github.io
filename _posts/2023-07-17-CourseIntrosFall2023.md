@@ -10,7 +10,8 @@ Exploring course introduction and syllabus ideas for post sabbatical Fall 2023, 
 [<< Alternate Abstractions 2>>](https://drive.google.com/file/d/171LSjIz773Iv3KQn7Tqcp4mWwbLU4TfM/view?usp=sharing)    
 [<< Alternate Abstractions 3>>](https://drive.google.com/file/d/1X-ULeq4mLOdUyihsU-bnJ-DIPPOkT6_F/view?usp=sharing)   
 
-[<< Connections Issues >>](https://drive.google.com/file/d/18xuoODq6xytTj00lcuZu57P_77Pwevnn/view?usp=sharing)   
+[<< Connections Issues 1 >>](https://drive.google.com/file/d/18xuoODq6xytTj00lcuZu57P_77Pwevnn/view?usp=sharing)   
+[<< Connections Issues 2 >>](https://drive.google.com/file/d/1A8Rr1f9McTFXw9gwKhUu_-ztNTcVmIQ-/view?usp=sharing)
 
 [<< Intro Ideas >>](https://drive.google.com/file/d/1NdeodjIOtcEEh2j3NHBuxjqyHYKA_qKj/view?usp=sharing)   
 
