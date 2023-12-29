@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Ready w/ Spring '24"
-date: 2023-012-29
+date: 2023-12-29
 ---
 
 Notes:
