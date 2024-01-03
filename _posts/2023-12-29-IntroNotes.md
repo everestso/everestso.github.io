@@ -6,5 +6,5 @@ date: 2023-12-29
 
 Notes:
 
-[Intro Notes](https://github.com/everestso/everestso.github.io/blob/master/img/cs24.L1.Intro.pdf)
+[Intro Notes](https://drive.google.com/file/d/1OtWaKwgBfp4Ojkk-Vb2f6I9FDH7myEcI/view?usp=sharing)
 
