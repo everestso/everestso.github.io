@@ -11,4 +11,6 @@ Notes:
 
 ## Fresno State Story
 ![Protesting2](https://github.com/everestso/everestso.github.io/blob/master/img/Protesting2.jpg "Protesting2")
+
+<img src="https://github.com/everestso/everestso.github.io/blob/master/img/Protesting2.jpg" alt="Protesting2" width="50%" height="auto"> 
  
