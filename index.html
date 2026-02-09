@@ -1,112 +1,287 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Character encoding and responsive scaling -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Page title shown in browser tab and search results -->
   <title>Dr. David Ruby • Lecturer • Fresno State</title>
-  <meta name="description" content="Dr. David Ruby — Lecturer at California State University, Fresno. Teaching, projects, and contact." />
+
+  <!-- Search engine description -->
+  <meta name="description"
+        content="Dr. David Ruby — Lecturer at California State University, Fresno. Teaching, projects, and contact." />
+
   <style>
+    /* ============================================================
+       Global CSS variables (site-wide design system)
+       Change colors, spacing, or max width here
+       ============================================================ */
     :root{
-      --bg:#0b1020; --card:#121a33; --text:#e9ecf5; --muted:#b8c0d8;
-      --accent:#7aa2ff; --accent2:#6ee7b7; --border:rgba(255,255,255,.10);
+      --bg:#0b1020;              /* Page background */
+      --card:#121a33;            /* Card background (unused directly) */
+      --text:#e9ecf5;            /* Primary text color */
+      --muted:#b8c0d8;           /* Secondary / muted text */
+      --accent:#7aa2ff;          /* Primary accent (links, buttons) */
+      --accent2:#6ee7b7;         /* Secondary accent */
+      --border:rgba(255,255,255,.10);
       --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 980px;
+      --radius: 18px;            /* Card corner radius */
+      --max: 980px;              /* Max page width */
     }
-	.profile-pic {
-	  width: 100%;
-	  max-width: 260px;
-	  aspect-ratio: 1 / 1;
-	  object-fit: cover;
-	  border-radius: 50%;
-      object-position: 50% 40%;
-	  border: 1px solid var(--border);
-	  box-shadow: var(--shadow);
-	}
-	.profile-wrap {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	}
-    *{box-sizing:border-box}
+
+    /* ============================================================
+       Profile image styling (circular portrait)
+       ============================================================ */
+    .profile-pic {
+      width: 100%;
+      max-width: 260px;          /* Controls image size */
+      aspect-ratio: 1 / 1;      /* Force square crop */
+      object-fit: cover;        /* Crop image to fill circle */
+      object-position: 50% 40%; /* Shift image vertically (portrait tuning) */
+      border-radius: 50%;       /* Makes the image circular */
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    /* Wrapper to center the profile image card content */
+    .profile-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       Base / reset styles
+       ============================================================ */
+    * { box-sizing: border-box; }
+
     body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 20% 0%, rgba(122,162,255,.20), transparent 60%),
-                  radial-gradient(900px 600px at 80% 20%, rgba(110,231,183,.14), transparent 55%),
-                  var(--bg);
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
+                   Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+
+      /* Background gradients for subtle depth */
+      background:
+        radial-gradient(1200px 700px at 20% 0%,
+          rgba(122,162,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 80% 20%,
+          rgba(110,231,183,.14), transparent 55%),
+        var(--bg);
+
       color:var(--text);
       line-height:1.55;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
+
+    /* ============================================================
+       Links
+       ============================================================ */
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    /* ============================================================
+       Sticky header / navigation bar
+       ============================================================ */
     header{
-      position:sticky; top:0; z-index:10;
+      position:sticky;
+      top:0;
+      z-index:10;
       backdrop-filter: blur(12px);
       background: rgba(11,16,32,.65);
       border-bottom: 1px solid var(--border);
     }
+
     .nav{
-      max-width:var(--max); margin:0 auto; padding:14px 18px;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    .dot{width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg,var(--accent),var(--accent2))}
-    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-    .links a{color:var(--muted)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 60px}
+
+    /* Branding area (site name + accent dot) */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+    }
+
+    /* Navigation links */
+    .links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .links a{ color:var(--muted); }
+
+    /* ============================================================
+       Page layout container
+       ============================================================ */
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:34px 18px 60px;
+    }
+
+    /* ============================================================
+       Hero section (intro + portrait)
+       ============================================================ */
     .hero{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr; /* Text heavier than image */
+      gap:18px;
       align-items:stretch;
     }
-    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+
+    /* Stack hero sections on smaller screens */
+    @media (max-width:860px){
+      .hero{ grid-template-columns:1fr; }
+    }
+
+    /* ============================================================
+       Card component (reused everywhere)
+       ============================================================ */
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.03)
+      );
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 22px;
     }
-    .kicker{color:var(--muted); letter-spacing:.08em; text-transform:uppercase; font-size:12px}
-    h1{margin:.35rem 0 .6rem; font-size: clamp(28px, 3.2vw, 44px); line-height:1.1}
-    .subtitle{color:var(--muted); font-size:16px; margin:0 0 18px}
-    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+
+    /* Small uppercase descriptor text */
+    .kicker{
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+
+    h1{
+      margin:.35rem 0 .6rem;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height:1.1;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 18px;
+    }
+
+    /* ============================================================
+       Pills (topic tags)
+       ============================================================ */
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+
     .pill{
-      padding:7px 10px; border-radius:999px;
+      padding:7px 10px;
+      border-radius:999px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.04);
       color:var(--muted);
       font-size:13px;
     }
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+
+    /* ============================================================
+       Buttons / calls-to-action
+       ============================================================ */
+    .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px; border-radius:12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
       border:1px solid var(--border);
       background: rgba(122,162,255,.16);
       color:var(--text);
       font-weight:650;
     }
-    .btn.secondary{background: rgba(255,255,255,.04); color:var(--muted)}
+
+    .btn.secondary{
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+    }
+
+    /* ============================================================
+       Content grid (Teaching / Projects / Contact)
+       ============================================================ */
     .grid{
       margin-top:18px;
-      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
     }
-    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
-    h2{margin:0 0 10px; font-size:18px}
-    ul{margin:10px 0 0 18px; color:var(--muted)}
-    .muted{color:var(--muted)}
+
+    @media (max-width:860px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    h2{ margin:0 0 10px; font-size:18px; }
+    ul{ margin:10px 0 0 18px; color:var(--muted); }
+    .muted{ color:var(--muted); }
+
+    /* ============================================================
+       Footer
+       ============================================================ */
     .footer{
-      margin-top:24px; padding-top:18px;
+      margin-top:24px;
+      padding-top:18px;
       border-top: 1px solid var(--border);
-      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
-      color:var(--muted); font-size:13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:13px;
     }
-    .note{font-size:12px; color:var(--muted)}
-    code.inline{background: rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--border)}
+
+    .note{ font-size:12px; color:var(--muted); }
+
+    /* Inline code formatting */
+    code.inline{
+      background: rgba(255,255,255,.06);
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--border);
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- ============================================================
+       Site header / navigation
+       ============================================================ -->
   <header>
     <div class="nav">
       <div class="brand">
@@ -122,21 +297,33 @@
     </div>
   </header>
 
+  <!-- ============================================================
+       Main content
+       ============================================================ -->
   <main class="wrap">
+
+    <!-- Hero section -->
     <section class="hero">
+
+      <!-- Intro / text card -->
       <div class="card">
         <div class="kicker">Lecturer • Computer Science</div>
         <h1>Dr. David Ruby</h1>
+
         <p class="subtitle">
-          Lecturer at <strong>California State University, Fresno</strong>. I teach and build hands-on systems in AI and programming.
+          Lecturer at <strong>California State University, Fresno</strong>.
+          I teach and build hands-on systems in AI and programming.
         </p>
 
+        <!-- Primary calls-to-action -->
         <div class="cta">
-          <a class="btn" href="https://github.com/everestso" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://github.com/everestso"
+             target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn secondary" href="#projects">See projects</a>
           <a class="btn secondary" href="#contact">Get in touch</a>
         </div>
 
+        <!-- Topic tags -->
         <div class="pillrow" aria-label="Focus areas">
           <span class="pill">AI Agents</span>
           <span class="pill">Reinforcement Learning</span>
@@ -146,21 +333,26 @@
         </div>
 
         <p class="note" style="margin-top:14px">
-          Tip: replace placeholders like <code class="inline">[course links]</code> with your real URLs.
+          Tip: replace placeholders like
+          <code class="inline">[course links]</code> with your real URLs.
         </p>
       </div>
 
+      <!-- Profile image card -->
       <div class="card profile-wrap">
-		  <img
-		    src="https://raw.githubusercontent.com/everestso/everestso.github.io/master/img/210809Portrait228_Med.jpg"
-		    alt="Dr. David Ruby, Lecturer at Fresno State"
-		    class="profile-pic"
-		  />
-	  </div>
+        <img
+          src="https://raw.githubusercontent.com/everestso/everestso.github.io/master/img/210809Portrait228_Med.jpg"
+          alt="Dr. David Ruby, Lecturer at Fresno State"
+          class="profile-pic"
+          loading="lazy"
+        />
+      </div>
 
     </section>
 
+    <!-- Teaching / Projects / Contact grid -->
     <section class="grid">
+
       <div class="card" id="teaching">
         <h2>Teaching</h2>
         <p class="muted">Current / recurring topics:</p>
@@ -170,45 +362,42 @@
           <li>Introduction to Programming (C++)</li>
           <li>Database Systems (SQL)</li>
         </ul>
-        <p class="note" style="margin-top:10px">
-          Add links: syllabus, Canvas page, office hours, and a “How to succeed” guide.
-        </p>
       </div>
 
       <div class="card" id="projects">
         <h2>Projects & demos</h2>
-        <p class="muted">A few ideas to list here:</p>
         <ul>
-          <li>Agentic coding assistants (tool use + code review loops)</li>
-          <li>Reinforcement learning notebooks (Gridworld → DQN)</li>
-          <li>Database “query agent” that safely builds parameterized SQL</li>
+          <li>Agentic coding assistants</li>
+          <li>Reinforcement learning notebooks</li>
+          <li>Database query agents</li>
         </ul>
-        <p class="note" style="margin-top:10px">
-          Link each project to a repo and a short “what to learn from this” write-up.
-        </p>
       </div>
 
       <div class="card" id="contact">
         <h2>Contact</h2>
         <p class="muted">
-          Email: <a href="mailto:druby@mail.fresnostate.edu">druby@mail.fresnostate.edu</a><br/>
-          Location: Fresno State (add building/room if you want it public)
-        </p>
-        <p class="note">
-          You can add Calendly/Google Calendar booking, or just office hour times.
+          Email:
+          <a href="mailto:druby@mail.fresnostate.edu">
+            druby@mail.fresnostate.edu
+          </a>
         </p>
       </div>
+
     </section>
 
+    <!-- Footer -->
     <div class="footer">
       <div>© <span id="year"></span> Dr. David Ruby • Built on GitHub Pages</div>
       <div class="muted">Repo: <code class="inline">everestso.github.io</code></div>
     </div>
+
   </main>
 
+  <!-- Auto-update copyright year -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+
 </body>
 </html>
-
