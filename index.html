@@ -13,6 +13,20 @@
       --radius: 18px;
       --max: 980px;
     }
+	.profile-pic {
+	  width: 100%;
+	  max-width: 260px;
+	  aspect-ratio: 1 / 1;
+	  object-fit: cover;
+	  border-radius: 16px;
+	  border: 1px solid var(--border);
+	  box-shadow: var(--shadow);
+	}
+	.profile-wrap {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
     *{box-sizing:border-box}
     body{
       margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -131,28 +145,18 @@
         </div>
 
         <p class="note" style="margin-top:14px">
-          Tip: replace placeholders like <span class="inline code">[course links]</span> with your real URLs.
+          Tip: replace placeholders like <code class="inline">[course links]</code> with your real URLs.
         </p>
       </div>
 
-      <div class="card">
-        <h2 id="about">About</h2>
-        <p class="muted">
-          I’m Dr. David Ruby, a lecturer at Fresno State. This site is a lightweight landing page for
-          courses, student resources, demos, and research-style projects.
-        </p>
+      <div class="card profile-wrap">
+		  <img
+		    src="https://raw.githubusercontent.com/everestso/everestso.github.io/master/img/210809Portrait228_Med.jpg"
+		    alt="Dr. David Ruby, Lecturer at Fresno State"
+		    class="profile-pic"
+		  />
+	  </div>
 
-        <h2 style="margin-top:14px">Quick links</h2>
-        <ul>
-          <li><a href="https://fresnostate.edu/" target="_blank" rel="noreferrer">Fresno State</a></li>
-          <li><a href="https://github.com/everestso" target="_blank" rel="noreferrer">GitHub profile</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <p class="note" style="margin-top:12px">
-          If you use official Fresno State marks, follow campus brand rules. See the official logo guidance.
-        </p>
-      </div>
     </section>
 
     <section class="grid">
@@ -206,58 +210,4 @@
   </script>
 </body>
 </html>
-
-<!--
-    This is a multi-line comment.
-    Comments in HTML are ignored by the browser and do not affect the rendering of the HTML.
-    They can be used to leave notes, explanations, or reminders for developers.
-<!DOCTYPE html>
-<html>
-	<head>
-		<a href="https://time.is/Fresno" id="time_is_link" rel="nofollow" style="font-size:12px">Fresno Time=</a>
-		<span id="Fresno_z14e" style="font-size:12px"></span>
-		<script src="//widget.time.is/t.js"></script>
-		<script>
-			time_is_widget.init({Fresno_z14e:{time_format:"12hours:minutes:seconds AMPM"}});
-		</script>
-		<title>David Ruby</title>
-
-		<link rel="stylesheet" type="text/css" href="/main.css">
-	</head>
-	<body>
-		 <p>
-			 <img src="img/210607Portrait052sm.jpg" alt="dr.profile" height=134  align="left"/>
-			 <h1> David Ruby </h1>
-			 <h3> Lecturer, Fresno State </h3>
-			 <h3> Machine Learning/Artificial Intelligence </h3>
-		 </br></br>
-
-		 </p>
-
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-			<li><a href="https://github.com/everestso/everestso.github.io/blob/master/about.md">About</a></li>
-        		<li><a href="https://www.linkedin.com/in/oc4rubys/">CV</a></li>
-        		<li><a href="/blog">Notes</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-				<p>GitHub.Io <a href="https://github.com/everestso/everestso.github.io/blob/master/about.md">Details...</a></p>
-    		</div>
-		</div>
-		<footer>
-    		<ul>
-        		<li><a href="mailto:donotmail@gmail.com">email</a></li>
-        		<li><a href="https://github.com/everestso">github.com/everestso</a></li>
-			<li><a href="https://earth.google.com/web/@33.69261225,-117.89236538,23.38284341a,273.03448457d,35y,-133.91442002h,59.98359515t,0r" target="_blank" rel="noopener noreferrer">Location Link</a></li>
-			<li><a href="https://github.com/everestso/Summer22/blob/main/Chess8123a.ipynb" target="_blank" rel="noopener noreferrer">Chess Location Link</a></li>
-		</ul>
-		</footer>
-	</body>
-</html>
-
-
--->
 
