@@ -1,3 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. David Ruby • Lecturer • Fresno State</title>
+  <meta name="description" content="Dr. David Ruby — Lecturer at California State University, Fresno. Teaching, projects, and contact." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121a33; --text:#e9ecf5; --muted:#b8c0d8;
+      --accent:#7aa2ff; --accent2:#6ee7b7; --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(122,162,255,.20), transparent 60%),
+                  radial-gradient(900px 600px at 80% 20%, rgba(110,231,183,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(12px);
+      background: rgba(11,16,32,.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .dot{width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg,var(--accent),var(--accent2))}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{color:var(--muted)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 60px}
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .kicker{color:var(--muted); letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+    h1{margin:.35rem 0 .6rem; font-size: clamp(28px, 3.2vw, 44px); line-height:1.1}
+    .subtitle{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .pill{
+      padding:7px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(122,162,255,.16);
+      color:var(--text);
+      font-weight:650;
+    }
+    .btn.secondary{background: rgba(255,255,255,.04); color:var(--muted)}
+    .grid{
+      margin-top:18px;
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+    }
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+    h2{margin:0 0 10px; font-size:18px}
+    ul{margin:10px 0 0 18px; color:var(--muted)}
+    .muted{color:var(--muted)}
+    .footer{
+      margin-top:24px; padding-top:18px;
+      border-top: 1px solid var(--border);
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+      color:var(--muted); font-size:13px;
+    }
+    .note{font-size:12px; color:var(--muted)}
+    code.inline{background: rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--border)}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>everestso.github.io</span>
+      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <div class="kicker">Lecturer • Computer Science</div>
+        <h1>Dr. David Ruby</h1>
+        <p class="subtitle">
+          Lecturer at <strong>California State University, Fresno</strong>. I teach and build hands-on systems in AI and programming.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="https://github.com/everestso" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn secondary" href="#projects">See projects</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+
+        <div class="pillrow" aria-label="Focus areas">
+          <span class="pill">AI Agents</span>
+          <span class="pill">Reinforcement Learning</span>
+          <span class="pill">Deep Learning</span>
+          <span class="pill">Databases</span>
+          <span class="pill">C++ / Python</span>
+        </div>
+
+        <p class="note" style="margin-top:14px">
+          Tip: replace placeholders like <span class="inline code">[course links]</span> with your real URLs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 id="about">About</h2>
+        <p class="muted">
+          I’m Dr. David Ruby, a lecturer at Fresno State. This site is a lightweight landing page for
+          courses, student resources, demos, and research-style projects.
+        </p>
+
+        <h2 style="margin-top:14px">Quick links</h2>
+        <ul>
+          <li><a href="https://fresnostate.edu/" target="_blank" rel="noreferrer">Fresno State</a></li>
+          <li><a href="https://github.com/everestso" target="_blank" rel="noreferrer">GitHub profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <p class="note" style="margin-top:12px">
+          If you use official Fresno State marks, follow campus brand rules. See the official logo guidance.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="teaching">
+        <h2>Teaching</h2>
+        <p class="muted">Current / recurring topics:</p>
+        <ul>
+          <li>Principles of Artificial Intelligence</li>
+          <li>Introduction to Deep Learning</li>
+          <li>Introduction to Programming (C++)</li>
+          <li>Database Systems (SQL)</li>
+        </ul>
+        <p class="note" style="margin-top:10px">
+          Add links: syllabus, Canvas page, office hours, and a “How to succeed” guide.
+        </p>
+      </div>
+
+      <div class="card" id="projects">
+        <h2>Projects & demos</h2>
+        <p class="muted">A few ideas to list here:</p>
+        <ul>
+          <li>Agentic coding assistants (tool use + code review loops)</li>
+          <li>Reinforcement learning notebooks (Gridworld → DQN)</li>
+          <li>Database “query agent” that safely builds parameterized SQL</li>
+        </ul>
+        <p class="note" style="margin-top:10px">
+          Link each project to a repo and a short “what to learn from this” write-up.
+        </p>
+      </div>
+
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="muted">
+          Email: <a href="mailto:druby@mail.fresnostate.edu">druby@mail.fresnostate.edu</a><br/>
+          Location: Fresno State (add building/room if you want it public)
+        </p>
+        <p class="note">
+          You can add Calendly/Google Calendar booking, or just office hour times.
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Dr. David Ruby • Built on GitHub Pages</div>
+      <div class="muted">Repo: <code class="inline">everestso.github.io</code></div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
 <!--
     This is a multi-line comment.
     Comments in HTML are ignored by the browser and do not affect the rendering of the HTML.
